@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Products>
+    <Product pid="01">
+        <Name>Duck Toy</Name>
+        <Price>250</Price>
+    </Product>
+    <Product pid="02">
+        <Name>Jigsaw Puzzle</Name>
+        <Price>300</Price>
+    </Product>
+    <Product pid="003">
+        <Name>Skipping Rope</Name>
+        <Price>320</Price>
+    </Product>
+</Products>

@@ -1,0 +1,18 @@
+{
+    "Products": {
+      "Product": [
+        {
+          "Name": "Duck Toy",
+          "Price": 250
+        },
+        {
+          "Name": "Jigsaw Puzzle",
+          "Price": 300
+        },
+        {
+          "Name": "Skipping Rope",
+          "Price": 320
+        }
+      ]
+    }
+  }
