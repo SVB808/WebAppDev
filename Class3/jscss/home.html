@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script>
+        var count = 0;
+        function showMessage()
+        {
+            count = count + 1;
+            var p = document.getElementById("message");
+            p.innerText = "Hello World "+count;
+            alert("Hello!!! Try out confirm box and Prompt box");
+        if(confirm("Press a button!")){
+            txt="You pressed the button!";
+        }
+        else{
+            txt="You pressed cancel!";
+        }
+
+        var person = prompt("Please enter your name","Harry Potter");
+        if(person == null || person == ""){
+            txt = "User cancelled the prompt";
+        }
+        else{
+            txt="Hello"+person+"How are you today?";
+        }
+        }
+    </script>
+</head>
+<body>
+    <p id="message"></p>
+    <button onclick="showMessage()">Click Here!</button>
+    <br><br>
+    <input type="button" value="Don't Click Here!"/>
+    <script>
+        showMessage();
+    </script>
+</body>
+</html>
+

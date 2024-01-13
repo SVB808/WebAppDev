@@ -1,0 +1,48 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script>
+        var count = 0;
+        function showMessage()
+        {
+            count = count + 1;
+            var p = document.getElementById("message");
+            p.innerText = "Hello World "+count;
+        }
+        function validate()
+        {
+            var txtName = document.getElementById("txtName");
+            if(txtName.value=='')
+            {
+                var p = document.getElementById("message");
+                p.innerText = "Name cannot be blank ";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="message"></p>
+    <button onclick="showMessage()">Click Here!</button>
+    <br><br>
+    <input type="button" value="Don't Click Here!"/>
+    <br><br>
+    <form action="" onsubmit="return validate()">
+        <input type="text" id="txtName">
+        <input type="submit" value="SUBMIT">
+    </form>
+    <script>
+        //setInterval(showMessage,5000);
+    </script>
+</body>
+</html>
