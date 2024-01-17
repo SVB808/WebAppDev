@@ -1,0 +1,83 @@
+p#message{
+    color: green !important;
+    font-weight: bold;
+}
+.sub-heading{
+    color: black;
+    font-weight: 500;
+}
+
+/* immediate child */
+
+div>p{
+    color: blueviolet;
+}
+
+/* Pseudo-classes selectors */
+
+a:link {
+    color: blueviolet
+}
+
+a:hover {
+    color: rgb(0, 255, 132);
+}
+
+a:visited{
+    color: palevioletred;
+}
+
+/* Pseudo element selectors */
+/* ::first-letter
+ ::first-line
+ ::selection 
+ ::before
+ ::after */
+
+ p.pseudo-element::first-letter {
+    color: green;
+    font-size:xx-large;
+
+ }
+
+/* attribute selector */
+
+a[target="_blank"] {
+    color: green;
+}
+
+/*
+#mybox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: lightcoral;
+    height: 200px;
+}
+
+#ball{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: myanimation alternate infinite 1s;
+}
+
+@keyframes myanimation {
+    0%{
+        transform: translateY(30px);
+    }
+    100%
+    {
+        transform: translateY(-30px);
+    }    
+}
+*/
+
+/* pseudo element selector */
+
+::selection{
+    background-color: yellow;
+    color: blue;
+}

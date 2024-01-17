@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="utility.css">
+    <title>Homepage</title>
+    <script>
+        var count = 0;
+        function showMessage()
+        {
+            count = count + 1;
+            var p = document.getElementById("message");
+            p.innerText = "Hello World "+count;
+        }
+        
+    </script>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="message" style="color: blue;"></p>
+    <p class="sub-heading">Paragraph 1</p>
+    <p class="sub-heading">Paragraph 2</p>
+    <p class="sub-heading">Paragraph 3</p>
+
+    <p class="pseudo-element">Simple Paragraph</p>
+    <div>
+        <p>Combinator Selector</p>
+    </div>
+
+    <a href="home.html" target="_blank">Go to Home1</a>
+
+    <button onclick="showMessage()">Click Here!</button>
+    <br><br>
+    <input type="button" value="Don't Click Here!"/>
+    <br><br>
+    <form action="" onsubmit="return validate()">
+        <input type="text" id="txtName">
+        <input type="submit" value="SUBMIT">
+    </form>
+    <div id="mybox">
+        <div id="ball">
+            
+        </div>
+    </div>
+    <script>
+        //setInterval(showMessage,5000);
+    </script>
+    <script src="utility.js"></script>
+</body>
+</html>
