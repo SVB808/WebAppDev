@@ -1,0 +1,8 @@
+p#message{
+    color: green !important;
+    font-weight: bold;
+}
+.sub-heading{
+    color: black;
+    font-weight: 500;
+}

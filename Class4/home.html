@@ -1,11 +1,9 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="utility.css">
     <title>Homepage</title>
     <script>
         var count = 0;
@@ -17,9 +15,17 @@
         }
         
     </script>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <p id="message"></p>
+    <p id="message" style="color: blue;"></p>
+    <p class="sub-heading">Paragraph 1</p>
+    <p class="sub-heading">Paragraph 2</p>
+    <p class="sub-heading">Paragraph 3</p>
     <button onclick="showMessage()">Click Here!</button>
     <br><br>
     <input type="button" value="Don't Click Here!"/>
@@ -31,6 +37,6 @@
     <script>
         //setInterval(showMessage,5000);
     </script>
-    <script src="/utility.js"></script>
+    <script src="utility.js"></script>
 </body>
 </html>
