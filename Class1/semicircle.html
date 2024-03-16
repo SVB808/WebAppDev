@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.
+        </canvas>
+        
+        <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        // Define the center coordinates and radius of the semi-circle
+        var centerX = 100;
+        var centerY = 50;
+        var radius = 40;
+        
+        // Calculate start and end angles for the semi-circle
+        var startAngle = Math.PI; // Start angle (180 degrees in radians)
+        var endAngle = 2 * Math.PI; // End angle (360 degrees in radians)
+        
+        // Draw the semi-circle
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+        ctx.stroke();
+        
+        // Draw a line to connect the two endpoints of the semi-circle
+        ctx.beginPath();
+        ctx.moveTo(centerX - radius, centerY); // Move to the start point of the line
+        ctx.lineTo(centerX + radius, centerY); // Draw a line to the end point of the line
+        ctx.stroke();
+        </script>
+                   
+</body>
+</html>
