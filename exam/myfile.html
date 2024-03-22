@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student = [];
+
+const name = document.getElementById("name");
+const course = document.getElementById("course");
+
+const deleteStudent = (idx) => {
+    student = student.filter((item, id) => id !== idx);
+    render();
+}
+
+
+document.getElementById("add").addEventListener("click", (e) => {
+    e.preventDefault();
+    if (name.value === "" || course.value === "") {
+        alert("Please fill all the fields");
+        return;
+    }
+    const c = course.value === "btech" ? "B. Tech" : "M. Tech";
+    student.push({ name: name.value, branch: c });
+    render();
+    name.value = "";
+    course.value = "btech";
+});
+
+const render = () => {
+    const tBody = document.getElementById("tableBody");
+
+    if (student.length == 0) {
+        const emptyTr = `
+            <tr>
+                <td colspan="3">No data found</td>
+            </tr>
+        `
+        tBody.innerHTML = emptyTr;
+        return;
+    }
+
+    const data = student.map((item, idx) => (
+        `
+        <tr>
+            <td class="text-danger">${item.name}</td>
+            <td>
+                <span class="badge bg-danger">${item.branch}</span>
+            </td>
+            <td onclick="deleteStudent(${idx})"><i class="fa-solid fa-trash"></i></td>
+        </tr>
+        `
+    ));
+
+    tBody.innerHTML = data.join("");
+}
+
+render();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-primary">Student Name List</h1>
+        <div class="">
+            <table class="table table-striped w-50">
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+        <div class="py-5">
+            <form action="#">
+                <div class="d-flex gap-5">
+                    <label>Name</label>
+                    <input type="text" id="name"/>
+                </div>
+                <div class="d-flex gap-5">
+                    <label>Course</label>
+                    <select name="course" id="course">
+                        <option value="btech">B. Tech</option>
+                        <option value="mtech">M. Tech</option>
+                    </select>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" id="add">Add</button>
+            </form>
+        </div>
+</body>
+</html>
